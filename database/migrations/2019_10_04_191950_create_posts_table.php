@@ -26,7 +26,7 @@ class CreatePostsTable extends Migration
 
         Schema::table('posts', function ($table) {
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('journal_id')->references('id')->on('jornals');
+            $table->foreign('journal_id')->references('id')->on('journals');
         });
 
     }

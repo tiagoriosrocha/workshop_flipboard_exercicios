@@ -13,14 +13,14 @@ class CreateJournalsTable extends Migration
      */
     public function up()
     {
-        Schema::create('jornals', function (Blueprint $table) {
+        Schema::create('journals', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });
 
-        Schema::table('jornals', function ($table) {
+        Schema::table('journals', function ($table) {
             $table->foreign('user_id')->references('id')->on('users');
         });
     }
