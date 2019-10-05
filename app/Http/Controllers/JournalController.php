@@ -14,7 +14,7 @@ class JournalController extends Controller
      */
     public function index()
     {
-        $journals = Journal::all();
+        $journals = Journal::with('seguidores')->get();
         return view('journal.list',compact('journals'));
     }
 
@@ -47,9 +47,8 @@ class JournalController extends Controller
      */
     public function show(Journal $journal)
     {
-        $journal->with('seguidores');
-        $seguidores = $journal->seguidores;
-        return view('journal.show',compact('journal','seguidores'));
+        $journal->with('seguidores','posts');
+        return view('journal.show',compact('journal'));
     }
 
     /**
@@ -86,8 +85,15 @@ class JournalController extends Controller
         //
     }
 
-    public function seguir(){
-        $journal = Journal::find(1);
-        $journal->seguidores()->attach(2);
+    public function follow($journal,$user){
+        $journal = Journal::find($journal);
+        $journal->seguidores()->attach($user);
+        return redirect('/journals');
+    }
+
+    public function unfollow($journal,$user){
+        $journal = Journal::find($journal);
+        $journal->seguidores()->detach($user);
+        return redirect('/journals');
     }
 }

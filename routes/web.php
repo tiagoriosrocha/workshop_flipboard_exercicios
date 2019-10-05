@@ -14,15 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
 
+
+//visualizar todas as revistas
 Route::get('/journals','JournalController@index');
+
+//visualizar os detalhes de uma revista
 Route::get('/journals/{journal}','JournalController@show')->name('journals.show');
 
+//seguir uma revista
+Route::get('/seguir/revista/{journal}/usuario/{user}','JournalController@follow');
 
-
-Route::get('/seguir','JournalController@seguir');
-
-Route::get('/user', function () {
-    $user = App\User::find(1)->with('seguindo');
-    dd($user);
-});
+//deixar de seguir uma revista
+Route::get('/naoseguir/revista/{journal}/usuario/{user}','JournalController@unfollow');
