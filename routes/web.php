@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/journals','JournalController@index');
+Route::get('/journals/{journal}','JournalController@show')->name('journals.show');
+
+
+
+Route::get('/seguir','JournalController@seguir');
+
+Route::get('/user', function () {
+    $user = App\User::find(1)->with('seguindo');
+    dd($user);
+});

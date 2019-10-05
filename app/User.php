@@ -39,6 +39,6 @@ class User extends Authenticatable
     ];
 
     public function seguindo(){
-        return $this->belongsToMany(Follow::class, 'follow', 'user_id', 'journal_id');
+        return $this->belongsToMany(Followers::class, 'followers', 'user_id', 'journal_id');
     }
 }

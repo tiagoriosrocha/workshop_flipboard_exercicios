@@ -3,11 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Follow;
+use App\User;
 
 class Journal extends Model
 {
     public function seguidores(){
-        return $this->belongsToMany(Follow::class, 'follow', 'journal_id', 'user_id');
+        return $this->belongsToMany(User::class, 'followers', 'journal_id', 'user_id');
     }
 }
