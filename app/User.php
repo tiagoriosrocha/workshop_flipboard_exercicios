@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use App\Follow;
+use App\Journal;
 
 class User extends Authenticatable
 {
@@ -39,7 +39,7 @@ class User extends Authenticatable
     ];
 
     public function seguindo(){
-        return $this->belongsToMany(Followers::class, 'followers', 'user_id', 'journal_id');
+        return $this->belongsToMany(Journal::class, 'followers', 'user_id', 'journal_id');
     }
 
     public function likes(){
