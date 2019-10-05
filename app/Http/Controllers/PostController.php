@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Journal;
+use App\Post;
 use Illuminate\Http\Request;
 
-class JournalController extends Controller
+class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class JournalController extends Controller
      */
     public function index()
     {
-        $journals = Journal::with('seguidores')->get();
-        return view('journal.list',compact('journals'));
+        //
     }
 
     /**
@@ -42,22 +41,22 @@ class JournalController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Journal  $journal
+     * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Journal $journal)
+    public function show(Post $post)
     {
-        $journal->with('seguidores','posts','posts.likes');
-        return view('journal.show',compact('journal'));
+        $post->likes;
+        return view('post.show',compact('post'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Journal  $journal
+     * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Journal $journal)
+    public function edit(Post $post)
     {
         //
     }
@@ -66,10 +65,10 @@ class JournalController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Journal  $journal
+     * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Journal $journal)
+    public function update(Request $request, Post $post)
     {
         //
     }
@@ -77,23 +76,23 @@ class JournalController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Journal  $journal
+     * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Journal $journal)
+    public function destroy(Post $post)
     {
         //
     }
 
-    public function follow($journal,$user){
-        $journal = Journal::find($journal);
-        $journal->seguidores()->attach($user);
-        return redirect('/journals');
+    public function like($post,$user){
+        $post = Post::find($post);
+        $post->likes()->attach($user);
+        return redirect("/journals/$post->journal_id");
     }
 
-    public function unfollow($journal,$user){
-        $journal = Journal::find($journal);
-        $journal->seguidores()->detach($user);
-        return redirect('/journals');
+    public function dislike($post,$user){
+        $post = Post::find($post);
+        $post->likes()->detach($user);
+        return redirect("/journals/$post->journal_id");
     }
 }

@@ -29,3 +29,15 @@ Route::get('/seguir/revista/{journal}/usuario/{user}','JournalController@follow'
 
 //deixar de seguir uma revista
 Route::get('/naoseguir/revista/{journal}/usuario/{user}','JournalController@unfollow');
+
+//ver os detalhes de um post
+Route::get('post/{post}','PostController@show');
+
+//ver os detalhes de um usuario
+Route::get('user/{user}','UserController@show');
+
+//dar um like
+Route::get('/curtir/post/{post}/usuario/{user}','PostController@like');
+
+//dar um deslike
+Route::get('/descurtir/post/{post}/usuario/{user}','PostController@dislike');

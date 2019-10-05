@@ -21,7 +21,6 @@ class CreatePostsTable extends Migration
             $table->longText('content');
             $table->integer('status')->default(1);
             $table->integer('visibility')->default(0);
-            $table->integer('likes')->default(0);
             $table->timestamps();
         });
 

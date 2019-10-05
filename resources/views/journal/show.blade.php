@@ -16,6 +16,15 @@
 <h3>Posts:</h3>
 	<ul>
 	@foreach($journal->posts as $post)
-		<li>{{$post->title}} - {{$post->created_at}}</li>
+		<li><a href="/post/{{$post->id}}">{{$post->title}}</a>
+			@auth
+			@if($post->likes->contains(Auth::user()))
+				<a href="/descurtir/post/{{$post->id}}/usuario/{{Auth::user()->id}}">Dislike</a>
+			@else
+				<a href="/curtir/post/{{$post->id}}/usuario/{{Auth::user()->id}}">Like</a>
+			@endif
+		@endauth
+			{{$post->likes->count()}}
+		</li>
 	@endforeach
 	</ul>

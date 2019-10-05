@@ -41,4 +41,8 @@ class User extends Authenticatable
     public function seguindo(){
         return $this->belongsToMany(Followers::class, 'followers', 'user_id', 'journal_id');
     }
+
+    public function likes(){
+        return $this->belongsToMany(Post::class, 'likes', 'user_id', 'post_id');
+    }
 }
