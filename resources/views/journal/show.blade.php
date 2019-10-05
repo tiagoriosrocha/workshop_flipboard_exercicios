@@ -8,7 +8,7 @@
 <h3>Seguidores:</h3>
 	<ul>
 	@foreach($journal->seguidores as $user)
-		<li>{{$user->name}}</li>
+		<li><a href="/user/{{$user->id}}">{{$user->name}}</a></li>
 	@endforeach
 	</ul>
 <br>

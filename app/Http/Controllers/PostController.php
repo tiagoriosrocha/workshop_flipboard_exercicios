@@ -47,6 +47,7 @@ class PostController extends Controller
     public function show(Post $post)
     {
         $post->likes;
+        $post->revista;
         return view('post.show',compact('post'));
     }
 
