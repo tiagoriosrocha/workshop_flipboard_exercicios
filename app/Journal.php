@@ -8,6 +8,6 @@ use App\Follow;
 class Journal extends Model
 {
     public function seguidores(){
-        return $this->belongsToMany(Follow::class, 'follow', 'user_id', 'journal_id');
+        return $this->belongsToMany(Follow::class, 'follow', 'journal_id', 'user_id');
     }
 }
