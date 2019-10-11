@@ -27,17 +27,30 @@ class HomeController extends Controller
      */
     public function index()
     {
+        //pegando os dados do usuário logado
         $user = Auth::user();
+        $user_id = $user->id;
+
         //Pegando todos os posts que não foram lidos ainda
-        $posts = DB::table('posts')
-                    ->whereNotIn('id',function ($query) {
+        $postsNaoLidos = DB::table('posts')
+                    ->whereNotIn('id',function ($query) use ($user_id){
                             $query->select('post_id')
                                   ->from('visualizeds')
-                                  ->where('user_id',101);
+                                  ->where('user_id', $user_id );
                     })
                     ->orderBy('id')
                     ->get();
 
-        return view('timeline.show',compact('posts','user'));
+        //Pegando todos os posts lidos
+        $postsLidos = DB::table('posts')
+                    ->whereIn('id',function ($query) use ($user_id){
+                            $query->select('post_id')
+                                  ->from('visualizeds')
+                                  ->where('user_id', $user_id );
+                    })
+                    ->orderBy('id')
+                    ->get();
+
+        return view('timeline.show',['postsnaolidos' => $postsNaoLidos, 'postslidos' => $postsLidos, 'user' => $user]);
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -49,6 +50,14 @@ class PostController extends Controller
         $post->likes;
         $post->visualizados;
         $post->revista;
+
+        //salva na tabela de post visualizado pelo usuário
+        try {
+            $post->visualizou()->attach(Auth::user());  
+        }
+        catch(\Exception $e) {
+            
+        }
         return view('post.show',compact('post'));
     }
 
