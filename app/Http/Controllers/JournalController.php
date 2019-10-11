@@ -14,7 +14,7 @@ class JournalController extends Controller
      */
     public function index()
     {
-        $journals = Journal::with('seguidores')->get();
+        $journals = Journal::with('seguidores')->simplePaginate(15);
         return view('journal.list',compact('journals'));
     }
 

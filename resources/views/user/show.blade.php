@@ -1,22 +1,23 @@
-<h1>User {{$user->id}}</h1>
+<h1>User {{$user->name}}</h1>
 <br>
 <p>Name: {{$user->name}}</p>
+<p>Id: {{$user->id}}</p>
 <br>
-<h3>Seguindo {{$user->seguindo->count()}} revistas:</h3>
+<h3>Following {{$user->seguindo->count()}} journals:</h3>
 <ul>
 @foreach($user->seguindo as $journal)
 	<li><a href="/journals/{{$journal->id}}">{{$journal->name}}</a></li>
 @endforeach
 </ul>
 <br>
-<h3>Curtindo {{$user->likes->count()}} posts:</h3>
+<h3>Enjoying {{$user->likes->count()}} posts:</h3>
 <ul>
 @foreach($user->likes as $post)
 	<li><a href="/post/{{$post->id}}">{{$post->title}}</a></li>
 @endforeach
 </ul>
 <br>
-<h3>Visualizado {{$user->visualizados->count()}} posts:</h3>
+<h3>Read {{$user->visualizados->count()}} posts:</h3>
 <ul>
 @foreach($user->visualizados as $post)
 	<li><a href="/post/{{$post->id}}">{{$post->title}}</a></li>

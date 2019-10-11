@@ -1,11 +1,11 @@
-<h1>Revista: {{$journal->name}}</h1>
+<h1>{{$journal->name}} Journal</h1>
 <br>
 
-<p>Nome: {{$journal->name}}</p>
-<p>Criada em: {{$journal->created_at}}</p>
+<p>Name: {{$journal->name}}</p>
+<p>Created at: {{$journal->created_at}}</p>
 <br>
 
-<h3>Seguidores:</h3>
+<h3>Followers:</h3>
 	<ul>
 	@foreach($journal->seguidores as $user)
 		<li><a href="/user/{{$user->id}}">{{$user->name}}</a></li>
@@ -16,15 +16,12 @@
 <h3>Posts:</h3>
 	<ul>
 	@foreach($journal->posts as $post)
-		<li><a href="/post/{{$post->id}}">{{$post->title}}</a>
-			@auth
-			@if($post->likes->contains(Auth::user()))
-				<a href="/descurtir/post/{{$post->id}}/usuario/{{Auth::user()->id}}">Dislike</a>
-			@else
-				<a href="/curtir/post/{{$post->id}}/usuario/{{Auth::user()->id}}">Like</a>
-			@endif
-		@endauth
+		<li>
+			<a href="/post/{{$post->id}}">{{$post->title}}</a> 
 			{{$post->likes->count()}}
 		</li>
 	@endforeach
 	</ul>
+
+	<br>
+	<a href="/journals"><< Journals List</a>

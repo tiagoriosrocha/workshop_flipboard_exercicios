@@ -56,7 +56,7 @@ class PostController extends Controller
             $post->visualizou()->attach(Auth::user());  
         }
         catch(\Exception $e) {
-            
+
         }
         return view('post.show',compact('post'));
     }
@@ -98,7 +98,7 @@ class PostController extends Controller
     public function like($post,$user){
         $post = Post::find($post);
         $post->likes()->attach($user);
-        return redirect("/journals/$post->journal_id");
+        return redirect("/post/$post->id");
     }
 
     public function visualized($post,$user){
@@ -110,6 +110,6 @@ class PostController extends Controller
     public function dislike($post,$user){
         $post = Post::find($post);
         $post->likes()->detach($user);
-        return redirect("/journals/$post->journal_id");
+        return redirect("/post/$post->id");
     }
 }

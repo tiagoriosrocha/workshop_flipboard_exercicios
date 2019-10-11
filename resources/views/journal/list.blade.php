@@ -1,10 +1,10 @@
-<h1>Lista de Revistas</h1>
+<h1>Journals List</h1>
 <br>
 <ul>
 @foreach($journals as $j)
 	<li>
-		<a href="{{ route('journals.show',$j->id) }}">{{$j->name}}</a>
-
+		<a href="{{ route('journals.show',$j->id) }}">{{$j->name}} </a>
+		{{$j->posts->count()}}
 		@auth
 			@if($j->seguidores->contains(Auth::user()))
 				<a href="/naoseguir/revista/{{$j->id}}/usuario/{{Auth::user()->id}}">Unfollow</a>
@@ -13,6 +13,7 @@
 			@endif
 		@endauth
 	</li>
-
 @endforeach
 </ul>
+
+{{ $journals->links() }}
