@@ -47,6 +47,7 @@ class PostController extends Controller
     public function show(Post $post)
     {
         $post->likes;
+        $post->visualizados;
         $post->revista;
         return view('post.show',compact('post'));
     }
@@ -89,6 +90,12 @@ class PostController extends Controller
         $post = Post::find($post);
         $post->likes()->attach($user);
         return redirect("/journals/$post->journal_id");
+    }
+
+    public function visualized($post,$user){
+        $post = Post::find($post);
+        $post->visualizou()->attach($user);
+        return redirect("/journals/$post->journal_id");   
     }
 
     public function dislike($post,$user){

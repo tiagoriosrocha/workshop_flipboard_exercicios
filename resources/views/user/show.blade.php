@@ -15,3 +15,10 @@
 	<li><a href="/post/{{$post->id}}">{{$post->title}}</a></li>
 @endforeach
 </ul>
+<br>
+<h3>Visualizado {{$user->visualizados->count()}} posts:</h3>
+<ul>
+@foreach($user->visualizados as $post)
+	<li><a href="/post/{{$post->id}}">{{$post->title}}</a></li>
+@endforeach
+</ul>

@@ -41,3 +41,6 @@ Route::get('/curtir/post/{post}/usuario/{user}','PostController@like');
 
 //dar um deslike
 Route::get('/descurtir/post/{post}/usuario/{user}','PostController@dislike');
+
+//marcar um post como visualizado
+Route::get('/visualizado/post/{post}/usuario/{user}','PostController@visualized');

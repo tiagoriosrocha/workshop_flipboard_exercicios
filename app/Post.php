@@ -11,6 +11,10 @@ class Post extends Model
     	return $this->belongsToMany(User::class, 'likes', 'post_id', 'user_id');
     }
 
+    public function visualizou(){
+    	return $this->belongsToMany(User::class, 'visualizeds', 'post_id', 'user_id');
+    }
+
     public function revista(){
     	return $this->belongsTo(Journal::class,'journal_id');
     }

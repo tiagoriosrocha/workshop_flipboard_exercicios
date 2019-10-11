@@ -12,3 +12,9 @@
 	@endforeach
 </ul>
 <br>
+<h3>Visualizado: {{$post->visualizou->count()}}</h3>
+<ul>
+	@foreach($post->visualizou as $user)
+		<li><a href="/user/{{$user->id}}">{{$user->name}}</a></li>
+	@endforeach
+</ul>
