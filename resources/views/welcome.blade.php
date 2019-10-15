@@ -86,9 +86,18 @@
             @auth
                 <div class="links">
                     <a href="/journals">Journals</a>
-                    <a href="/home">Home</a>
+                    <a href="">Posts</a>
+                    <a href="/home">Timeline</a>
+                    <a href="/user/{{Auth::user()->id}}">Profile</a>
                 </div>
             @endauth
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="links">
+                    <a href="/toDo">Workshop Tasks</a>
+                </div>
             </div>
         </div>
     </body>

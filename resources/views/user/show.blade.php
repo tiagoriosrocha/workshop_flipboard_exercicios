@@ -6,11 +6,11 @@
 <h3>Following {{$user->seguindo->count()}} journals:</h3>
 <ul>
 @foreach($user->seguindo as $journal)
-	<li><a href="/journals/{{$journal->id}}">{{$journal->name}}</a></li>
+	<li><a href="/journal/{{$journal->id}}">{{$journal->name}}</a></li>
 @endforeach
 </ul>
 <br>
-<h3>Enjoying {{$user->likes->count()}} posts:</h3>
+<h3>Liked {{$user->likes->count()}} posts:</h3>
 <ul>
 @foreach($user->likes as $post)
 	<li><a href="/post/{{$post->id}}">{{$post->title}}</a></li>

@@ -14,7 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//gerencia as rotas de autenticação
 Auth::routes();
+
+
+//rota toDo
+Route::get('/toDo', function(){
+	return view('toDo');
+});
+
+//exibe timeline
 Route::get('/home', 'HomeController@index')->name('home');
 
 
@@ -22,7 +32,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/journals','JournalController@index');
 
 //visualizar os detalhes de uma revista
-Route::get('/journals/{journal}','JournalController@show')->name('journals.show');
+Route::get('/journal/{journal}','JournalController@show')->name('journals.show');
 
 //seguir uma revista
 Route::get('/seguir/revista/{journal}/usuario/{user}','JournalController@follow');
@@ -32,6 +42,9 @@ Route::get('/naoseguir/revista/{journal}/usuario/{user}','JournalController@unfo
 
 //ver os detalhes de um post
 Route::get('post/{post}','PostController@show');
+
+//ver a lista de usuários
+Route::get('/users','UserController@index');
 
 //ver os detalhes de um usuario
 Route::get('user/{user}','UserController@show');

@@ -9,7 +9,7 @@
 	@endauth
 </p>
 <br>
-<p>Journal: <a href="/journals/{{$post->revista->id}}">{{$post->revista->name}}</a></p>
+<p>Journal: <a href="/journal/{{$post->revista->id}}">{{$post->revista->name}}</a></p>
 <p>Title: {{$post->title}}</p>
 <p>Text: {{$post->content}}</p>
 <p>Created at: {{$post->created_at}}</p>
@@ -29,4 +29,5 @@
 </ul>
 
 <br>
-<a href="/journals/{{$post->revista->id}}"><< Journal</a>
+<a href="/journal/{{$post->revista->id}}"><< Journal</a><br>
+<a href="/home"><< Home</a>
