@@ -83,6 +83,11 @@
 	<li>Criar a view user/list.blade.php</li>
 	<br>
 
+	<li>Instalar o bootstrap</li>
+	<li>Configurar o layout "esqueleto" das páginas</li>
+	<li>Configurar a view para usar o layout "esqueleto"</li>
+	<br>
+
 </ol>
 <br>
 
@@ -116,6 +121,15 @@ php artisan make:controller JournalController --resource --model=Journal
 <textarea cols="90" rows="15">
 composer require laravel/ui --dev
 php artisan ui vue --auth
+npm install && npm run dev
+</textarea>
+<br>
+
+<p>Comandos Bootstrap (Laravel > 6):</p>
+<p>
+<textarea cols="90" rows="15">
+composer require laravel/ui --dev
+php artisan ui bootstrap
 npm install && npm run dev
 </textarea>
 <br>
