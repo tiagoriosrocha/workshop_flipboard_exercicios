@@ -1,100 +1,104 @@
-<h1>Workshop: Flipboard</h1>
+@extends('layouts.esqueleto')
+
+@section('content')
+<p class="h1">Workshop: Flipboard</p>
 <hr>
 <p>Vamos desenvolver uma rede social que irá exibir artigos (posts) publicados por journals/Magazines.</p>
 <br>
 
-<p><b>Requisitos Funcionais:</b></p>
-<ul>
-	<li><u><b>Feito</b></u> O usuário poderá criar o seu cadastro</li>
-	<li><u><b>Feito</b></u> O usuário poderá fazer login no sistema para poder navegar</li>
-	<li><u><b>Não feito</b></u> Cada journal poderá publicar vários posts</li>
-	<li><u><b>Feito</b></u> O usuário poderá visualizar a lista de jornals</li>
-	<li><u><b>Feito</b></u> O usuário poderá visualizar os detalhes de um Journal específico</li>
-	<li><u><b>Feito</b></u> O usuário poderá seguir os journals para receber os posts na sua timeline.</li>
-	<li><u><b>Feito</b></u> O usuário poderá ver a lista de posts publicados por um journal específico</li>
-	<li><u><b>Não Feito</b></u> O usuário poderá visualizar os detalhes de um Post específico</li>
-	<li><u><b>Não Feito</b></u> O usuário poderá curtir os posts.</li>
-	<li><u><b>Feito</b></u> O sistema deverá armazenar quem visualizou cada post</li>
-	<li><u><b>Não Feito</b></u> O sistema deverá armazenar quem curtiu cada post</li>
-	<li><u><b>Feito</b></u> O sistema deverá armazenar quem segue cada Journal</li>
-	<li><u><b>Feito</b></u> O usuário poderá visualizar em sua timeline os posts não lidos dos journals que ele segue</li>
-	<li><u><b>Feito</b></u> O usuário poderá visualizar em sua timeline posts sugeridos pelo sistema</li>
-	<li><u><b>Feito</b></u> O usuário poderá visualizar em sua timeline os posts lidos</li>
-	<li><u><b>Não Feito</b></u> O usuário poderá visualizar a lista de usuários cadastrados</li>
-	<li><u><b>Feito</b></u> O usuário poderá visualizar o perfil de outros usuários e ver quais interações foram realizadas pelo usuário, por exemplo, quais jornals o usuário segue, que posts ele visualizou e que posts ele curtiu</li>
-	<li>Desafio: Criar uma página com estatísticas:
-		<ul>
-			<li>post com mais curtidas;</li>
-			<li>post com mais visualizações;</li>
-			<li>journal com mais seguidores;</li> 
-			<li>usuário que mais visualizaram posts;</li> 
-			<li>usuário que mais seguem journals;</li> 
-			<li>usuário com mais deram curtidas</li>
+<p class="h3"><b>Requisitos Funcionais:</b></p>
+<br>
+<ul class="list-group">
+	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá criar o seu cadastro</li>
+	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá fazer login no sistema para poder navegar</li>
+	<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> Cada journal poderá publicar vários posts</li>
+	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá visualizar a lista de jornals</li>
+	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá visualizar os detalhes de um Journal específico</li>
+	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá seguir os journals para receber os posts na sua timeline.</li>
+	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá ver a lista de posts publicados por um journal específico</li>
+	<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> O usuário poderá visualizar os detalhes de um Post específico</li>
+	<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> O usuário poderá curtir os posts.</li>
+	<li class="list-group-item"><span class="badge badge-success">Feito</span> O sistema deverá armazenar quem visualizou cada post</li>
+	<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> O sistema deverá armazenar quem curtiu cada post</li>
+	<li class="list-group-item"><span class="badge badge-success">Feito</span> O sistema deverá armazenar quem segue cada Journal</li>
+	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá visualizar em sua timeline os posts não lidos dos journals que ele segue</li>
+	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá visualizar em sua timeline posts sugeridos pelo sistema</li>
+	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá visualizar em sua timeline os posts lidos</li>
+	<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> O usuário poderá visualizar a lista de usuários cadastrados</li>
+	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá visualizar o perfil de outros usuários e ver quais interações foram realizadas pelo usuário, por exemplo, quais jornals o usuário segue, que posts ele visualizou e que posts ele curtiu</li>
+	<li class="list-group-item">Desafio: Criar uma página com estatísticas:
+		<ul class='list-group'>
+			<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> post com mais curtidas;</li>
+			<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> post com mais visualizações;</li>
+			<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> journal com mais seguidores;</li> 
+			<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> usuário que mais visualizaram posts;</li> 
+			<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> usuário que mais seguem journals;</li> 
+			<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> usuário com mais deram curtidas</li>
 		</ul> 
 </ul>
 <br>
 
-<p><b>Lista de Tarefas:</b></p>
-<ol>
-	<li>Fazer download do projeto base do GitHub</li>	
-	<li>Configurar o .env</li>
-	<li>Configurar o config/database.php</li>
+<p class="h3"><b>Lista de Tarefas:</b></p>
+<br>
+<ul class='group-list'>
+	<li class="list-group-item">Fazer download do projeto base do GitHub</li>	
+	<li class="list-group-item">Configurar o .env</li>
+	<li class="list-group-item">Configurar o config/database.php</li>
 	<br>
 
-	<li>Habilitar o pacote de autenticação make:Auth</li>
-	<li>Habilitar o vue para melhorar o front dos cadastros</li>
+	<li class="list-group-item">Habilitar o pacote de autenticação make:Auth</li>
+	<li class="list-group-item">Habilitar o vue para melhorar o front dos cadastros</li>
 	<br>
 
-	<li>Criar o migration Journal</li>
-	<li>Criar o migration Posts</li>
-	<li>Criar o migration Follow</li>
-	<li>Criar o migration Likes</li>
-	<li>Criar o migration Visualized</li>
+	<li class="list-group-item">Criar o migration Journal</li>
+	<li class="list-group-item">Criar o migration Posts</li>
+	<li class="list-group-item">Criar o migration Follow</li>
+	<li class="list-group-item">Criar o migration Likes</li>
+	<li class="list-group-item">Criar o migration Visualized</li>
 	<br>
 
-	<li>Criar o factory Journal</li>
-	<li>Criar o seed Journal</li>
-	<li>Criar o factory Post</li>
-	<li>Criar o seed Post</li>
-	<li>Configurar o DatabaseSeeder.php</li>
-	<li>Executar o comando de criação de banco e inserção de registros no Banco de Dados</li>
+	<li class="list-group-item">Criar o factory Journal</li>
+	<li class="list-group-item">Criar o seed Journal</li>
+	<li class="list-group-item">Criar o factory Post</li>
+	<li class="list-group-item">Criar o seed Post</li>
+	<li class="list-group-item">Configurar o DatabaseSeeder.php</li>
+	<li class="list-group-item">Executar o comando de criação de banco e inserção de registros no Banco de Dados</li>
 	<br>
 
-	<li>Criar o model Journal e configurar as relações</li>
-	<li>Criar o model Posts e configurar as relações</li>
-	<li>Criar o model Follow e configurar as relações</li>
-	<li>Criar o model user e configurar as relações</li>
+	<li class="list-group-item">Criar o model Journal e configurar as relações</li>
+	<li class="list-group-item">Criar o model Posts e configurar as relações</li>
+	<li class="list-group-item">Criar o model Follow e configurar as relações</li>
+	<li class="list-group-item">Criar o model user e configurar as relações</li>
 	<br>
 
-	<li>Criar as rotas</li>
+	<li class="list-group-item">Criar as rotas</li>
 	<br>
 
-	<li>Criar o controller JournalController</li>
-	<li>Criar o controller PostController</li>
-	<li>Criar o controller UserController</li>
+	<li class="list-group-item">Criar o controller JournalController</li>
+	<li class="list-group-item">Criar o controller PostController</li>
+	<li class="list-group-item">Criar o controller UserController</li>
 	<br>
 
-	<li>Criar a view journal/list.blade.php</li>
-	<li>Criar a view journal/show.blade.php</li>
-	<li>Criar a view post/list.blade.php</li>
-	<li>Criar a view post/show.blade.php</li>
-	<li>Criar a view timeline/show.blade.php</li>
-	<li>Criar a view user/show.blade.php</li>
-	<li>Criar a view user/list.blade.php</li>
+	<li class="list-group-item">Criar a view journal/list.blade.php</li>
+	<li class="list-group-item">Criar a view journal/show.blade.php</li>
+	<li class="list-group-item">Criar a view post/list.blade.php</li>
+	<li class="list-group-item">Criar a view post/show.blade.php</li>
+	<li class="list-group-item">Criar a view timeline/show.blade.php</li>
+	<li class="list-group-item">Criar a view user/show.blade.php</li>
+	<li class="list-group-item">Criar a view user/list.blade.php</li>
 	<br>
 
-	<li>Instalar o bootstrap</li>
-	<li>Configurar o layout "esqueleto" das páginas</li>
-	<li>Configurar a view para usar o layout "esqueleto"</li>
+	<li class="list-group-item">Instalar o bootstrap</li>
+	<li class="list-group-item">Configurar o layout "esqueleto" das páginas</li>
+	<li class="list-group-item">Configurar a view para usar o layout "esqueleto"</li>
 	<br>
-
-</ol>
+</ul>
 <br>
 
-<p><b>Outras Informações:</b></p>
+<p class="h3"><b>Outras Informações:</b></p>
 <br>
 
-<p>Comandos Banco de Dados:</p>
+<p class="h4">Comandos Banco de Dados:</p>
 <p>
 <textarea cols="90" rows="15">
 php artisan make:migration create_journals_table --create
@@ -107,7 +111,7 @@ php artisan migrate:fresh --seed
 </textarea>
 <br>
 
-<p>Comandos Controller:</p>
+<p class="h4">Comandos Controller:</p>
 <p>
 <textarea cols="90" rows="15">
 php artisan make:controller JournalController
@@ -116,7 +120,7 @@ php artisan make:controller JournalController --resource --model=Journal
 </textarea>
 <br>
 
-<p>Comandos Auth (Laravel > 6):</p>
+<p class="h4">Comandos Auth (Laravel > 6):</p>
 <p>
 <textarea cols="90" rows="15">
 composer require laravel/ui --dev
@@ -125,7 +129,7 @@ npm install && npm run dev
 </textarea>
 <br>
 
-<p>Comandos Bootstrap (Laravel > 6):</p>
+<p class="h4">Comandos Bootstrap (Laravel > 6):</p>
 <p>
 <textarea cols="90" rows="15">
 composer require laravel/ui --dev
@@ -134,7 +138,7 @@ npm install && npm run dev
 </textarea>
 <br>
 
-<p>Rotas:</p>
+<p class="h4">Rotas:</p>
 <p>
 <textarea cols="90" rows="15">
 /home
@@ -152,8 +156,6 @@ npm install && npm run dev
 </textarea>
 </p>
 <br>
-<a href="/">Main</a><br>
-<a href="/home">Home</a><br>
-<a href="/posts">Posts</a><br>
-<a href="/journals">Journals</a><br>
-<a href="/users">Users</a><br>
+<br>
+<br>
+@endsection
