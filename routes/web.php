@@ -1,16 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -57,18 +46,19 @@ Route::get('/visualizado/post/{post}/usuario/{user}','PostController@visualized'
 /*** EXERCÍCIO 1 SEU CÓDIGO AQUI ***/
 
 //ver os detalhes de um post
-//***EXERCÍCIO 2 SEU CÓDIGO AQUI ***/
+/***EXERCÍCIO 2 SEU CÓDIGO AQUI ***/
 
 //ver a lista de usuários
-//***EXERCÍCIO 3 SEU CÓDIGO AQUI ***/
+/***EXERCÍCIO 3 SEU CÓDIGO AQUI ***/
 
 //dar um like
-//***EXERCÍCIO 4 SEU CÓDIGO AQUI ***/
+/***EXERCÍCIO 4 SEU CÓDIGO AQUI ***/
 
 //dar um deslike
-//***EXERCÍCIO 4 SEU CÓDIGO AQUI ***/
+/***EXERCÍCIO 4 SEU CÓDIGO AQUI ***/
 
 //criar um post simples
-//***EXERCÍCIO 5 SEU CÓDIGO AQUI ***/
+/***EXERCÍCIO 5 SEU CÓDIGO AQUI ***/
 
-
+//estatisticas (post com mais curtidas)
+/***EXERCÍCIO 6 SEU CÓDIGO AQUI ***/
