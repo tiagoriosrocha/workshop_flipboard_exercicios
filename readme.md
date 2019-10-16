@@ -95,60 +95,50 @@
 
 <p class="h4">Comandos Banco de Dados:</p>
 <p>
-<textarea cols="90" rows="15">
-php artisan make:migration create_journals_table --create
-php artisan make:model Journal --migration
-php artisan make:factory Journal --model=Journal
-php artisan make:seed JournalTableSeeder
-php artisan migrate
-php artisan migrate:fresh
-php artisan migrate:fresh --seed
-</textarea>
+<p>php artisan make:migration create_journals_table --create</p>
+<p>php artisan make:model Journal --migration</p>
+<p>php artisan make:factory Journal --model=Journal</p>
+<p>php artisan make:seed JournalTableSeeder</p>
+<p>php artisan migrate</p>
+<p>php artisan migrate:fresh</p>
+<p>php artisan migrate:fresh --seed</p>
 <br>
 
 <p class="h4">Comandos Controller:</p>
 <p>
-<textarea cols="90" rows="15">
-php artisan make:controller JournalController
-php artisan make:controller JournalController --resource
-php artisan make:controller JournalController --resource --model=Journal
-</textarea>
+<p>php artisan make:controller JournalController</p>
+<p>php artisan make:controller JournalController --resource</p>
+<p>php artisan make:controller JournalController --resource --model=Journal</p>
 <br>
 
 <p class="h4">Comandos Auth (Laravel > 6):</p>
 <p>
-<textarea cols="90" rows="15">
-composer require laravel/ui --dev
-php artisan ui vue --auth
-npm install && npm run dev
-</textarea>
+<p>composer require laravel/ui --dev</p>
+<p>php artisan ui vue --auth</p>
+<p>npm install && npm run dev</p>
 <br>
 
 <p class="h4">Comandos Bootstrap (Laravel > 6):</p>
 <p>
-<textarea cols="90" rows="15">
-composer require laravel/ui --dev
-php artisan ui bootstrap
-npm install && npm run dev
-</textarea>
+<p>composer require laravel/ui --dev</p>
+<p>php artisan ui bootstrap</p>
+<p>npm install && npm run dev</p>
 <br>
 
 <p class="h4">Rotas:</p>
 <p>
-<textarea cols="90" rows="15">
-/home
-/journals
-/journal/{journal}
-/seguir/revista/{journal}/usuario/{user}
-/naoseguir/revista/{journal}/usuario/{user}
-/posts
-/post/{post}
-/users
-/user/{user}
-/curtir/post/{post}/usuario/{user}
-/descurtir/post/{post}/usuario/{user}
-/visualizado/post/{post}/usuario/{user}
-</textarea>
+<p>/home</p>
+<p>/journals</p>
+<p>/journal/{journal}</p>
+<p>/seguir/revista/{journal}/usuario/{user}</p>
+<p>/naoseguir/revista/{journal}/usuario/{user}</p>
+<p>/posts</p>
+<p>/post/{post}</p>
+<p>/users</p>
+<p>/user/{user}</p>
+<p>/curtir/post/{post}/usuario/{user}</p>
+<p>/descurtir/post/{post}/usuario/{user}</p>
+<p>/visualizado/post/{post}/usuario/{user}</p>
 </p>
 <br>
 <br>
