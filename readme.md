@@ -39,41 +39,27 @@
 	<li class="list-group-item">Fazer download do projeto base do GitHub</li>	
 	<li class="list-group-item">Configurar o .env</li>
 	<li class="list-group-item">Configurar o config/database.php</li>
-	<br>
-
 	<li class="list-group-item">Habilitar o pacote de autenticação make:Auth</li>
 	<li class="list-group-item">Habilitar o vue para melhorar o front dos cadastros</li>
-	<br>
-
 	<li class="list-group-item">Criar o migration Journal</li>
 	<li class="list-group-item">Criar o migration Posts</li>
 	<li class="list-group-item">Criar o migration Follow</li>
 	<li class="list-group-item">Criar o migration Likes</li>
 	<li class="list-group-item">Criar o migration Visualized</li>
-	<br>
-
 	<li class="list-group-item">Criar o factory Journal</li>
 	<li class="list-group-item">Criar o seed Journal</li>
 	<li class="list-group-item">Criar o factory Post</li>
 	<li class="list-group-item">Criar o seed Post</li>
 	<li class="list-group-item">Configurar o DatabaseSeeder.php</li>
 	<li class="list-group-item">Executar o comando de criação de banco e inserção de registros no Banco de Dados</li>
-	<br>
-
 	<li class="list-group-item">Criar o model Journal e configurar as relações</li>
 	<li class="list-group-item">Criar o model Posts e configurar as relações</li>
 	<li class="list-group-item">Criar o model Follow e configurar as relações</li>
 	<li class="list-group-item">Criar o model user e configurar as relações</li>
-	<br>
-
 	<li class="list-group-item">Criar as rotas</li>
-	<br>
-
 	<li class="list-group-item">Criar o controller JournalController</li>
 	<li class="list-group-item">Criar o controller PostController</li>
 	<li class="list-group-item">Criar o controller UserController</li>
-	<br>
-
 	<li class="list-group-item">Criar a view journal/list.blade.php</li>
 	<li class="list-group-item">Criar a view journal/show.blade.php</li>
 	<li class="list-group-item">Criar a view post/list.blade.php</li>
@@ -81,8 +67,6 @@
 	<li class="list-group-item">Criar a view timeline/show.blade.php</li>
 	<li class="list-group-item">Criar a view user/show.blade.php</li>
 	<li class="list-group-item">Criar a view user/list.blade.php</li>
-	<br>
-
 	<li class="list-group-item">Instalar o bootstrap</li>
 	<li class="list-group-item">Configurar o layout "esqueleto" das páginas</li>
 	<li class="list-group-item">Configurar a view para usar o layout "esqueleto"</li>
