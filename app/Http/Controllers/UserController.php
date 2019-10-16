@@ -14,11 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        //$users = User::orderBy('name')->get(); //ordenar por nome
-        //$users = User::paginate(10);
-
-        return view('user.list',compact('users'));
+        /*** EXERCÍCIO 3 - SEU CÓDIGO AQUI ***/
     }
 
     /**

@@ -11,24 +11,22 @@
 <ul class="list-group">
 	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá criar o seu cadastro</li>
 	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá fazer login no sistema para poder navegar</li>
-	<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> Cada journal poderá publicar vários posts</li>
+	<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> Cada journal poderá publicar vários posts <span class="badge badge-primary">Exercício 5</span></li>
 	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá visualizar a lista de jornals</li>
 	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá visualizar os detalhes de um Journal específico</li>
 	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá seguir os journals para receber os posts na sua timeline.</li>
 	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá ver a lista de posts publicados por um journal específico</li>
-	<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> O usuário poderá visualizar os detalhes de um Post específico</li>
-	<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> O usuário poderá curtir os posts.</li>
-	<li class="list-group-item"><span class="badge badge-success">Feito</span> O sistema deverá armazenar quem visualizou cada post</li>
-	<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> O sistema deverá armazenar quem curtiu cada post</li>
-	<li class="list-group-item"><span class="badge badge-success">Feito</span> O sistema deverá armazenar quem segue cada Journal</li>
+	<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> O usuário poderá ver a lista de posts publicados por data <span class="badge badge-primary">Exercício 1</span></li>
+	<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> O usuário poderá visualizar os detalhes de um Post específico  <span class="badge badge-primary">Exercício 2</span></li>
+	<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> O usuário poderá curtir os posts. <span class="badge badge-primary">Exercício 4</span></li>
 	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá visualizar em sua timeline os posts não lidos dos journals que ele segue</li>
 	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá visualizar em sua timeline posts sugeridos pelo sistema</li>
 	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá visualizar em sua timeline os posts lidos</li>
-	<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> O usuário poderá visualizar a lista de usuários cadastrados</li>
+	<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> O usuário poderá visualizar a lista de usuários cadastrados <span class="badge badge-primary">Exercício 3</span></li>
 	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá visualizar o perfil de outros usuários e ver quais interações foram realizadas pelo usuário, por exemplo, quais jornals o usuário segue, que posts ele visualizou e que posts ele curtiu</li>
 	<li class="list-group-item">Desafio: Criar uma página com estatísticas:
 		<ul class='list-group'>
-			<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> post com mais curtidas;</li>
+			<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> post com mais curtidas; <span class="badge badge-primary">Exercício 6</span></li>
 			<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> post com mais visualizações;</li>
 			<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> journal com mais seguidores;</li> 
 			<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> usuário que mais visualizaram posts;</li> 

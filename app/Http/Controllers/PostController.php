@@ -15,7 +15,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        /*** EXERCÍCIO 1 - SEU CÓDIGO AQUI ***/
     }
 
     /**
@@ -47,18 +47,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        $post->likes;
-        $post->visualizados;
-        $post->revista;
-
-        //salva na tabela de post visualizado pelo usuário
-        try {
-            $post->visualizou()->attach(Auth::user());  
-        }
-        catch(\Exception $e) {
-
-        }
-        return view('post.show',compact('post'));
+        /*** EXERCÍCIO 2 - SEU CÓDIGO AQUI ***/
     }
 
     /**
@@ -95,21 +84,17 @@ class PostController extends Controller
         //
     }
 
-    public function like($post,$user){
-        $post = Post::find($post);
-        $post->likes()->attach($user);
-        return redirect("/post/$post->id");
-    }
-
     public function visualized($post,$user){
         $post = Post::find($post);
         $post->visualizou()->attach($user);
         return redirect("/journals/$post->journal_id");   
     }
 
+    public function like($post,$user){
+        /*** EXERCÍCIO 4 - SEU CÓDIGO AQUI ***/
+    }
+
     public function dislike($post,$user){
-        $post = Post::find($post);
-        $post->likes()->detach($user);
-        return redirect("/post/$post->id");
+        /*** EXERCÍCIO 4 - SEU CÓDIGO AQUI ***/   
     }
 }

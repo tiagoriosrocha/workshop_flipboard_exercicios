@@ -40,20 +40,35 @@ Route::get('/seguir/revista/{journal}/usuario/{user}','JournalController@follow'
 //deixar de seguir uma revista
 Route::get('/naoseguir/revista/{journal}/usuario/{user}','JournalController@unfollow');
 
-//ver os detalhes de um post
-Route::get('post/{post}','PostController@show');
-
-//ver a lista de usuários
-Route::get('/users','UserController@index');
-
 //ver os detalhes de um usuario
 Route::get('user/{user}','UserController@show');
 
-//dar um like
-Route::get('/curtir/post/{post}/usuario/{user}','PostController@like');
-
-//dar um deslike
-Route::get('/descurtir/post/{post}/usuario/{user}','PostController@dislike');
-
 //marcar um post como visualizado
 Route::get('/visualizado/post/{post}/usuario/{user}','PostController@visualized');
+
+
+//******************************************************
+//******************************************************
+//                 ROTAS PARA A OFICINA
+//******************************************************
+//******************************************************
+
+//ver a lista de posts
+/*** EXERCÍCIO 1 SEU CÓDIGO AQUI ***/
+
+//ver os detalhes de um post
+//***EXERCÍCIO 2 SEU CÓDIGO AQUI ***/
+
+//ver a lista de usuários
+//***EXERCÍCIO 3 SEU CÓDIGO AQUI ***/
+
+//dar um like
+//***EXERCÍCIO 4 SEU CÓDIGO AQUI ***/
+
+//dar um deslike
+//***EXERCÍCIO 4 SEU CÓDIGO AQUI ***/
+
+//criar um post simples
+//***EXERCÍCIO 5 SEU CÓDIGO AQUI ***/
+
+

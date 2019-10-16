@@ -89,6 +89,7 @@
                     <a href="">Posts</a>
                     <a href="/home">Timeline</a>
                     <a href="/user/{{Auth::user()->id}}">Profile</a>
+                    <a href="/users">Users</a>
                 </div>
             @endauth
                 <br>
