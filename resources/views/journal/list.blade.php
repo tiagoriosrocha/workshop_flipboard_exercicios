@@ -19,7 +19,13 @@
 					<div class="row">
 						<div class="col-md-10">
 						<a href="{{ route('journals.show',$j->id) }}">{{$j->name}} </a>
-						<span class="badge badge-secondary btn-sm">{{$j->posts->count()}}</span>
+						<span class="badge badge-primary btn-sm">{{$j->posts->count()}} posts</span>
+						@if($j->seguidores->count() == 1)
+							<span class="badge badge-primary btn-sm">{{$j->seguidores->count()}} seguidor</span>
+						@elseif($j->seguidores->count() > 1)
+							<span class="badge badge-primary btn-sm">{{$j->seguidores->count()}} seguidores</span>
+							
+						@endif
 					</div>
 					@auth
 						<div class="col-md-2">

@@ -2,7 +2,7 @@
 <br>
 
 <p>Name: {{$journal->name}}</p>
-<p>Created at: {{$journal->created_at}}</p>
+<p>Created at: {{\Carbon\Carbon::parse($journal->created_at)->format('d/m/Y h:m')}}</p>
 <br>
 
 <h3>Followers:</h3>

@@ -10,6 +10,6 @@ $factory->define(Post::class, function (Faker $faker) {
         'user_id' => rand(1,100),
         'journal_id' => rand(1,100),
         'title' => $faker->realText($maxNbChars = 50, $indexSize = 2),
-        'content' => $faker->realText($maxNbChars = 200, $indexSize = 2),
+        'content' => $faker->realText($maxNbChars = 10000, $indexSize = 2),
     ];
 });
