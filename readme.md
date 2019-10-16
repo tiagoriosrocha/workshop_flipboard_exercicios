@@ -1,72 +1,155 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+<p class="h1">Workshop: Flipboard</p>
+<hr>
+<p>Vamos desenvolver uma rede social que irá exibir artigos (posts) publicados por journals/Magazines.</p>
+<br>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+<p class="h3"><b>Requisitos Funcionais:</b></p>
+<br>
+<ul class="list-group">
+	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá criar o seu cadastro</li>
+	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá fazer login no sistema para poder navegar</li>
+	<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> Cada journal poderá publicar vários posts <span class="badge badge-primary">Exercício 5</span></li>
+	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá visualizar a lista de jornals</li>
+	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá visualizar os detalhes de um Journal específico</li>
+	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá seguir os journals para receber os posts na sua timeline.</li>
+	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá ver a lista de posts publicados por um journal específico</li>
+	<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> O usuário poderá ver a lista de posts publicados por data <span class="badge badge-primary">Exercício 1</span></li>
+	<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> O usuário poderá visualizar os detalhes de um Post específico  <span class="badge badge-primary">Exercício 2</span></li>
+	<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> O usuário poderá curtir os posts. <span class="badge badge-primary">Exercício 4</span></li>
+	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá visualizar em sua timeline os posts não lidos dos journals que ele segue</li>
+	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá visualizar em sua timeline posts sugeridos pelo sistema</li>
+	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá visualizar em sua timeline os posts lidos</li>
+	<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> O usuário poderá visualizar a lista de usuários cadastrados <span class="badge badge-primary">Exercício 3</span></li>
+	<li class="list-group-item"><span class="badge badge-success">Feito</span> O usuário poderá visualizar o perfil de outros usuários e ver quais interações foram realizadas pelo usuário, por exemplo, quais jornals o usuário segue, que posts ele visualizou e que posts ele curtiu</li>
+	<li class="list-group-item">Desafio: Criar uma página com estatísticas:
+		<ul class='list-group'>
+			<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> post com mais curtidas; <span class="badge badge-primary">Exercício 6</span></li>
+			<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> post com mais visualizações;</li>
+			<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> journal com mais seguidores;</li> 
+			<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> usuário que mais visualizaram posts;</li> 
+			<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> usuário que mais seguem journals;</li> 
+			<li class="list-group-item"><span class="badge badge-warning">Não Feito</span> usuário com mais deram curtidas</li>
+		</ul> 
+</ul>
+<br>
+
+<p class="h3"><b>Lista de Tarefas:</b></p>
+<br>
+<ul class='group-list'>
+	<li class="list-group-item">Fazer download do projeto base do GitHub</li>	
+	<li class="list-group-item">Configurar o .env</li>
+	<li class="list-group-item">Configurar o config/database.php</li>
+	<br>
+
+	<li class="list-group-item">Habilitar o pacote de autenticação make:Auth</li>
+	<li class="list-group-item">Habilitar o vue para melhorar o front dos cadastros</li>
+	<br>
+
+	<li class="list-group-item">Criar o migration Journal</li>
+	<li class="list-group-item">Criar o migration Posts</li>
+	<li class="list-group-item">Criar o migration Follow</li>
+	<li class="list-group-item">Criar o migration Likes</li>
+	<li class="list-group-item">Criar o migration Visualized</li>
+	<br>
+
+	<li class="list-group-item">Criar o factory Journal</li>
+	<li class="list-group-item">Criar o seed Journal</li>
+	<li class="list-group-item">Criar o factory Post</li>
+	<li class="list-group-item">Criar o seed Post</li>
+	<li class="list-group-item">Configurar o DatabaseSeeder.php</li>
+	<li class="list-group-item">Executar o comando de criação de banco e inserção de registros no Banco de Dados</li>
+	<br>
+
+	<li class="list-group-item">Criar o model Journal e configurar as relações</li>
+	<li class="list-group-item">Criar o model Posts e configurar as relações</li>
+	<li class="list-group-item">Criar o model Follow e configurar as relações</li>
+	<li class="list-group-item">Criar o model user e configurar as relações</li>
+	<br>
+
+	<li class="list-group-item">Criar as rotas</li>
+	<br>
+
+	<li class="list-group-item">Criar o controller JournalController</li>
+	<li class="list-group-item">Criar o controller PostController</li>
+	<li class="list-group-item">Criar o controller UserController</li>
+	<br>
+
+	<li class="list-group-item">Criar a view journal/list.blade.php</li>
+	<li class="list-group-item">Criar a view journal/show.blade.php</li>
+	<li class="list-group-item">Criar a view post/list.blade.php</li>
+	<li class="list-group-item">Criar a view post/show.blade.php</li>
+	<li class="list-group-item">Criar a view timeline/show.blade.php</li>
+	<li class="list-group-item">Criar a view user/show.blade.php</li>
+	<li class="list-group-item">Criar a view user/list.blade.php</li>
+	<br>
+
+	<li class="list-group-item">Instalar o bootstrap</li>
+	<li class="list-group-item">Configurar o layout "esqueleto" das páginas</li>
+	<li class="list-group-item">Configurar a view para usar o layout "esqueleto"</li>
+	<br>
+</ul>
+<br>
+
+<p class="h3"><b>Outras Informações:</b></p>
+<br>
+
+<p class="h4">Comandos Banco de Dados:</p>
+<p>
+<textarea cols="90" rows="15">
+php artisan make:migration create_journals_table --create
+php artisan make:model Journal --migration
+php artisan make:factory Journal --model=Journal
+php artisan make:seed JournalTableSeeder
+php artisan migrate
+php artisan migrate:fresh
+php artisan migrate:fresh --seed
+</textarea>
+<br>
+
+<p class="h4">Comandos Controller:</p>
+<p>
+<textarea cols="90" rows="15">
+php artisan make:controller JournalController
+php artisan make:controller JournalController --resource
+php artisan make:controller JournalController --resource --model=Journal
+</textarea>
+<br>
+
+<p class="h4">Comandos Auth (Laravel > 6):</p>
+<p>
+<textarea cols="90" rows="15">
+composer require laravel/ui --dev
+php artisan ui vue --auth
+npm install && npm run dev
+</textarea>
+<br>
+
+<p class="h4">Comandos Bootstrap (Laravel > 6):</p>
+<p>
+<textarea cols="90" rows="15">
+composer require laravel/ui --dev
+php artisan ui bootstrap
+npm install && npm run dev
+</textarea>
+<br>
+
+<p class="h4">Rotas:</p>
+<p>
+<textarea cols="90" rows="15">
+/home
+/journals
+/journal/{journal}
+/seguir/revista/{journal}/usuario/{user}
+/naoseguir/revista/{journal}/usuario/{user}
+/posts
+/post/{post}
+/users
+/user/{user}
+/curtir/post/{post}/usuario/{user}
+/descurtir/post/{post}/usuario/{user}
+/visualizado/post/{post}/usuario/{user}
+</textarea>
 </p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<br>
+<br>
+<br>
