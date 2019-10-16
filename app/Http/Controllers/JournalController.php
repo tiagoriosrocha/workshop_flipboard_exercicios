@@ -25,7 +25,7 @@ class JournalController extends Controller
      */
     public function create()
     {
-        //
+        /*** EXERCÍCIO 5 - SEU CÓDIGO AQUI ***/
     }
 
     /**
@@ -36,8 +36,7 @@ class JournalController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        /*** EXERCÍCIO 5 - SEU CÓDIGO AQUI ***/    }
 
     /**
      * Display the specified resource.
