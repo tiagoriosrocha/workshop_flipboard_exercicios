@@ -93,6 +93,10 @@
 </ul>
 <br>
 
+<p class="h3"><b>Diagrama ER:</b></p>
+<img src="{{  asset('images/der.png') }}" class="img-thumbnail">
+<br>
+
 <p class="h3"><b>Outras Informações:</b></p>
 <br>
 
